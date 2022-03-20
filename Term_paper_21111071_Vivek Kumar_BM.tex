@@ -1,0 +1,225 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{hyperref}  %allows for clickable reference
+\hypersetup{colorlinks = true,citecolor = blue, linkcolor = blue, urlcolor = blue}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\setlength{\columnsep}{1.5cm}
+\setlength{\columnseprule}{1pt}
+
+\usepackage[backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{bibfile.bib} %Imports bibliography file
+ 
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+
+\usepackage{fancyhdr}
+
+\lhead{ }
+\rhead{ }
+ 
+\renewcommand{\headrulewidth}{0.4pt} %thickness of Line
+\cfoot{\thepage}
+\renewcommand{\footrulewidth}{0.2pt}  %thickness of line
+
+ 
+\begin{document}
+\pagestyle{empty}
+
+\begin{tikzpicture}
+[remember picture, overlay]
+x\draw [line width=2pt]($(current page.north west)+(1in,-1in)$) rectangle ($(current page.south east)+(-1in, 1in)$);x
+
+\end{tikzpicture}
+
+
+   \begin{center}
+       \vspace{1cm}
+	   \Large
+       \textbf{National Institute Of Technology, Raipur } 
+       \vspace{1.5cm}
+     
+       \includegraphics[scale=0.1]{nit-raipur-logo.png}\\
+       \vspace{0.8cm}
+       \Huge
+       Term-Project-Report\\
+       \vspace{0.3cm}
+       on\\
+       \vspace{0.6cm}
+      \textbf{ ''Role of Portable Biomedical Equipments in Health Care.''}
+      
+	\vfill      
+      
+   \begin{multicols}{2} 
+   \begin{flushleft}
+       \large
+       \textbf{Submitted by:}\\
+       Name: Vivek Kumar\\
+       Roll no: 21111071\\
+       Branch : Biomedical\\
+       Semester : $1^{st}$ \\
+       NIT Raipur,Chhattisgarh\\
+       \columnbreak
+       \textbf{Under the Supervision of:}\\
+       Mr.Saurabh Gupta
+       Department of : Biomedical Engineering\\
+       NIT Raipur, Chhattisgarh
+    \end{flushleft}
+    \end{multicols}    
+            
+   \end{center}
+
+\clearpage
+\pagestyle{fancy}
+\pagenumbering{roman}
+\begin{center}
+\section*{\underline{Acknowledgement}}
+\addcontentsline{toc}{section}{\numberline{}Acknowledgement}
+\end{center}
+\doublespacing
+At the very outset of this report. I would like to extend my sincere \& heartfelt obligations towards all the personage who has helped me in this endeavor. Without their active guidance, help, cooperation \& encouragement, I would not have made headway in the project.\\
+\\
+I would like to express my special thanks of gratitude to my teacher \textbf{'' Mr.Saurabh Gupta''} for your guidance and support and also this College \textbf{''NIT Raipur''} for giving me the golden opportunity to do this wonderful project on the topic \textbf{''Role of Portable Biomedical Equipments in Health Care.''}, which also helped me in doing a lot of research and I came to know about so many new things.\\
+\\
+I am really thankful to them.\\
+\\
+Secondly, I would also like to thank my Parents and Friends who helped me a lot in Finishing this Project within a Limited time.\\
+\begin{flushright}
+\textbf{- Vivek Kumar}
+\end{flushright}
+\vfill
+Date of Submission: 20-Mar-2022
+\clearpage
+\singlespacing
+\begin{center}
+\section*{\underline{Abstract}}
+\addcontentsline{toc}{section}{\numberline{}Abstract}
+The use of Portable Medical Devices (PMDs) has become increasingly widespread over the last few years. A combination of factors; including advances in technology, the pressure to reduce public health costs, and the desire to make health solutions accessible to a wider patient base are contributing to the growth in the PMD market.
+There is a wide application of PMDs in the Healthcare Sector, from Primary care to Serious Medical Conditions. So, in this Report, I have discussed various aspects of PMDs, their benefits, risks, Key considerations in its creation, and the PMD Market. 
+\end{center}
+\clearpage
+\pagestyle{fancy}
+\begin{center}
+\tableofcontents
+\end{center}
+
+\addcontentsline{toc}{section}{\numberline{}Contents}
+\clearpage
+\chead{Term-Project-Report}
+\rfoot{Page \thepage}
+\fancyfoot[CO,RE]{Vivek Kumar}
+\fancyfoot[LO,CE]{20-Mar-2022}
+\pagenumbering{arabic}
+\section{Introduction}
+
+As improvements in wireless technology have expanded patients' mobility in a hospital or at home, the usage of portable medical devices is fast rising in ever-increasing applications such as cardiac, respiratory, fitness, and wellness. Low-cost sensor technology, low power consumption, repeatability, and reliability are all important characteristics for portable medical devices that patients can use at home. Through two major areas: Bluetooth Low Energy and miniaturization, these solutions enable design engineers and patients to benefit from the benefits of compact size and portability without sacrificing functionality. Without sacrificing system size or battery life, Bluetooth 5 certified technology provides the industry's lowest power consumption and advanced wireless functionality.
+
+
+\section{Discussion}
+\subsection{Key considerations in the creation of portable medical equipment}
+
+A wide range of portable medical devices is already in the market, while various next-gen devices are under development.  The key considerations in terms of technology are discussed below:  -
+
+\subsubsection{Wireless Medical devices}
+To support health care delivery, radio frequency (RF) wireless medical devices execute at least one function that uses wireless RF communication such as Wi-Fi, Bluetooth, and cellular/mobile phone. Controlling and programming a medical device, monitoring patients remotely, and transferring patient data from the medical device to another platform, such as a cell phone, are all examples of functions that can benefit from wireless technology. As RF wireless technology advances, medical device designers will increasingly include it in their designs.\cite{Borad:2021}
+\subsubsection{Design and Hardware}
+The most critical aspect of a medical device's success is its design and development. A loosely defined and designed medical device cannot comply with the regulatory needs and make it to market. Or, in the unlikely event that it passes compliance, it will fail to deliver the stated functionality and benefits by market expectations, resulting in lower market acceptance than well-designed solutions.
+\\
+Portable medical equipment has a product lifetime that might range from days to months of stocking and use before being discarded. As a result, power optimization is a difficult task and a critical design factor.
+\subsubsection{Cloud Based Deployment}
+Cloud-based solutions give IT professionals access to features like enrolling, locking, managing and securing devices from a distant location. Modern mobile devices run on a variety of operating systems that require regular firmware updates to keep them running smoothly. A cloud-based MDM (Mobile Device Management) solution enables a faster response to such update requirements than an on-premises solution.
+
+\subsubsection{Security}
+MDM (mobile device management) is a piece of software that allows IT teams to manage, secure, and enforce policies on smartphones, tablets, and other mobile devices. To establish a complete mobile device and security corporate mobility management solution, mobile device management software is frequently integrated with other security services and technologies such as mobile application management.
+ Cyber security is a major concern. But the pros of mobile health technology outweigh its cons.
+
+\subsection{Portable Medical  Devices Example }
+\ding{226} Portable ultrasound Fig[\ref{Fig_Ultrasound}]\\
+\ding{226} Glucose Monitors Fig[\ref{Fig_Glucose-monitor}]\\
+\ding{226} Blood pressure monitor Fig[\ref{Fig_blood-pressure-monitor}]\\
+\ding{226} Hand-held ECG Fig[\ref{Fig_Hand-Held-ECG}]\\
+\ding{226} Multidiagnostic devices\\
+\ding{226} Digital stethoscope\\
+\ding{226} Otoscope\\
+\ding{226} Vision test\\ 
+\ding{226} Portable Oxygen Concentrator
+
+\begin{figure}[h]
+\centering
+\begin{subfigure}[l]{0.4\textwidth}
+	\centering 
+    \includegraphics[scale=0.42]{Mobius_ultrasound.jpg}
+    \caption{Portable Ultrasound}
+    \label{Fig_Ultrasound}
+\end{subfigure}
+\hspace{2cm}
+\begin{subfigure}[r]{0.4\textwidth}
+	\centering
+	 \includegraphics[scale=0.42]{glucose_Monitor.jpg}
+    \caption{Glucose Monitor}
+    \label{Fig_Glucose-monitor}
+\end{subfigure}
+%\end{figure}
+\\
+%\begin{figure}[h]
+\begin{subfigure}[l]{0.4\textwidth}
+	\centering 
+    \includegraphics[scale=0.2]{portable-blood-pressure-monitor.jpg}
+    \caption{blood pressure monitor}
+    \label{Fig_blood-pressure-monitor}
+\end{subfigure}
+\hspace{2cm}
+\begin{subfigure}[r]{0.4\textwidth}
+	\centering
+	 \includegraphics[scale=0.17]{Hand-Held-ECG.jpg}
+    \caption{Hand Held ECG}
+    \label{Fig_Hand-Held-ECG}
+\end{subfigure}
+\caption{Some Portable Devices}
+\end{figure}
+
+\section{Benefits of Portable Medical Equipments}
+ Portable Medical Devices have always an advantage over Conventional bulky Medical Devices. There is the widespread use of this with ease and Some of its benefits are discussed below.
+\subsection{Better Point of Care co-ordination}  Doctors and nurses can now coordinate better with the patient about the diagnosis, medication, and the follow-up process. This point-of-care coordination is making a huge difference in patient recovery and decreasing the number of re-admissions. 
+\cite{Kathooria:2017}
+\subsection{Quick Actions}
+Acting Quickly to any medical Conditions at Earliest can Reduce the risk of worsening the medical condition and gives an advantage on treatment. and this Problem is Solved by Portable Medical Devices. The portable medical kit can be widely applied to different medical nursing situations of various hospitals and health centers and has a wide range of applications.
+
+\subsection{Increases Mobility}
+Wireless technology in medical devices has several advantages, including increasing patient mobility by removing wires that tether a patient to a medical bed, allowing health care professionals to remotely program devices, and allowing physicians to remotely access and monitor patient data regardless of the patient's location. \cite{FDA:2018}
+
+ \subsection{Reduced Cost}
+when A Bulky machine is replaced with a portable machine then many unwanted parts are either removed or replaced with light and compact parts and some parts are replaced with alternatives that reduce the cost of the machine The Machine becomes lighter, compact, and easy to use. This Reduction in Machine Cost Ultimately reduces the machine maintenance cost and Treatment Cost.
+ 
+ \subsection{Help Patient Transfers} 
+ Transferring sick patients at their risks will never fully be eliminated. Inter- and intra-hospital transfers, particularly for ventilated patients, can be potentially very Complicated with Huge Medical equipment Patients that are transferred are also more complicated, need a higher degree of care and resources. Various Portable Equipment available can Reduce this Risk of portability of Patients with ease. \cite{Today:2021}
+ 
+\section{Risks of Portable Medical Devices}
+There is always a risk associated with Wireless and Portable Devices as they are wireless and not as secure as wired Connections Some of the risks, I have mentioned below:-
+\subsection{Data Exposure}
+Using portable devices can increase the risk of data loss (when a physical device is lost) data exposure (when sensitive data is exposed to the public or a third party without consent)
+\subsection{Cyber attacks}
+Hospitals are seen to be key targets for Cyber-attackers because one Hospital Holds Data from Thousands of people. There is increased exposure to network-based attacks to and from any system the device is connected to (both directly and via networks over the Internet).
+\subsection{Safety Standards}
+Maintaining the Safety and Standards should be at Top of any Health Care System but Still, there is a chance of using the Device that either doesn't maintain the safety standards of Equipment parts are failed due to lack of Maintenance with Time.
+Regulatory agencies and standards organizations are established all around the world to Monitor the compliance of devices and to ensure the safety and efficiency of medical devices.
+\section{Portable Medical Electronics Market}
+From USD 12.53 billion in 2017, the global portable medical electronic devices market is estimated to reach USD 31.49 billion by 2025, increasing at a CAGR of 12.2 percent from 2018 to 2025. The data in the future market study dates back to 2016, the base year for calculations is 2017, and the forecast period is from 2018 to 2025.\cite{research:2021}
+
+Businesses will need to reevaluate their corporate mobility strategy as 5G is projected to reach the enterprise arena soon. Because 5G will accelerate the adoption of smart devices, wearables, AI, IoT, AR, and VR across industries, this is the case. As a result, effective management solutions are required to simplify device management.
+\section{Conclusion}
+No doubt mobile technology is changing our daily routines. And now, it is changing the way we heal. The benefits of mobile devices in healthcare are discussed above to give you an appreciation of the possibilities in this area. However, the risks should not be ignored.
+
+Using them without proper standards can lead to unsafe practices and breaches of patient privacy. Healthcare service providers should thus implement a strategy that will help keep the quality of service high while keeping the patients safe. With a robust mobile strategy, healthcare providers can take advantage of accurate and real-time information to help improve end-to-end healthcare processes.
+\clearpage
+\fancyfoot[CO,RE]{Bibliography Page}
+\printbibliography
+\addcontentsline{toc}{section}{\numberline{}Bibliography}
+\end{document}
